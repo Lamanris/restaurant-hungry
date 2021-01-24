@@ -156,7 +156,17 @@ a {
   }
   &_logo {
     margin-top: 25px;
+    text-align: center;
   }
+}
+
+.navbar {
+  width: 50%;
+  display: flex;
+}
+
+.right-navbar {
+  justify-content: flex-end;
 }
 
 .navbar_item {
@@ -187,6 +197,7 @@ a {
     font-size: 12px;
     line-height: 12px;
     color: #FFFFFF;
+    width: 38px;
   }
   &_work-time p {
     transform: rotate(-180deg);
@@ -202,13 +213,32 @@ a {
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 20px;
   }
   &_title {
     font-family: "Banny Round", sans-serif;
     font-size: 96px;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 60px;
   }
+
+  &_title span {
+    position: relative;
+  }
+  &_title span:after {
+    content: "";
+    width: 60px;
+    height: 5px;
+    background: #E8C300;
+    border-radius: 50px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
   &_buttons {
     display: flex;
     justify-content: center;
@@ -219,6 +249,7 @@ a {
   &_icons {
     display: flex;
     flex-direction: column;
+    width: 38px;
   }
   &_icon {
     color: white;
@@ -472,233 +503,249 @@ a {
 }
 
 .menu {
-  margin-top: 100px;
-  margin-bottom: 60px;
-}
+    margin-top: 100px;
+    margin-bottom: 60px;
 
-.menu_text-box {
-  max-width: 565px;
-  margin: 0 auto;
-  text-align: center;
-}
+  &_text-box {
+    max-width: 565px;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-.menu_types {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
+  &_types {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
 
-.menu_type-item {
-  font-weight: bold;
-  font-size: 12px;
-  color: #333333;
-  width: 120px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid rgba(51, 51, 51, 0.2);
-  cursor: pointer;
-  text-transform: uppercase;
-}
+  &_type-item {
+    font-weight: bold;
+    font-size: 12px;
+    color: #333333;
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(51, 51, 51, 0.2);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
 
-.menu_type-item:last-of-type {
-  border: none;
-}
+  &_type-item:last-of-type {
+    border: none;
+  }
 
-.menu_list {
-  margin: 0 -40px;
-  display: none;
-}
+  &_list {
+    margin: 51px -10px 0;
+    display: none;
+  }
 
-.menu_list.active {
-  display: flex;
-}
+  &_list.active {
+    display: flex;
+  }
 
-.menu_list-col {
-  padding: 40px;
-}
+  &_list-col {
+    padding: 0 10px;
+  }
 
-.menu_list-item {
-  height: 66px;
-  animation: fadeInTop 0.5s ease forwards;
-}
+  &_list-item {
+    height: 66px;
+    animation: fadeInTop 0.5s ease forwards;
+  }
 
-.menu_list-item_title {
-  font-family: "Banny Round", sans-serif;
-  font-size: 18px;
-  color: #333333;
-  font-weight: bold;
-  text-transform: uppercase;
-}
+  &_list-item_title {
+    font-family: "Banny Round", sans-serif;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
-.menu_list-item_title span {
-  margin-left: 5px;
-}
+  &_list-item_title span {
+    margin-left: 5px;
+  }
 
-.menu_list-item_text {
-  color: #999;
-  font-size: 14px;
+  &_list-item_text {
+    color: #999;
+    font-size: 14px;
+  }
 }
 
 .events {
   background: url("../img/specialty's-bg.png") no-repeat center/cover;
+  &_img-box {
+    position: relative;
+  }
+
+  &_img-box1:after {
+    left: 0;
+  }
+  &_img-box2:after {
+    right: 0;
+  }
+
+  &_img-box_sign {
+    font-family:"Banny Round", sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+  }
+
+  &_img-box1_sign {
+    transform: rotate(90deg);
+    right: 0;
+    top: 0;
+  }
+
+  &_img-box2_sign {
+    left: 0;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    bottom: 0;
+  }
+
+  &_bottom-text {
+    font-size: 12px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    height: 60px;
+  }
 }
 
-.events_img-box {
-  position: relative;
-}
+.places {
+  &-images_container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 
-.events_img-box1:after {
-  left: 0;
-}
-.events_img-box2:after {
-  right: 0;
-}
-
-.events_img-box_sign {
-  font-family:"Banny Round", sans-serif;
-  font-size: 24px;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background: #000000;
-  border-radius: 0 5px 5px 0;
-  position: absolute;
-}
-
-.events_img-box1_sign {
-  transform: rotate(90deg);
-  right: 0;
-  top: 0;
-}
-
-.events_img-box2_sign {
-  left: 0;
-  transform: rotate(180deg);
-  writing-mode: vertical-lr;
-  bottom: 0;
-}
-
-.events_bottom-text {
-  font-size: 12px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.5);
-  height: 60px;
-}
-
-.places-images-img img {
-  max-width: 100%;
-  display: block;
+  &-images-img img {
+    max-width: 100%;
+    display: block;
+  }
 }
 
 .contact {
   padding-bottom: 100px;
+  &_text-box {
+    max-width: 565px;
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+
+  &_text-box_title {
+    margin-top: 100px;
+  }
+
+  &_form {
+    flex-wrap: wrap;
+    margin: 0 -5px;
+  }
+
+  &_input-wrap {
+    padding: 0 5px;
+  }
+
+  &_input {
+    width: 100%;
+    background: #E5E5E5;
+    border-radius: 5px;
+    height: 60px;
+    border: none;
+    padding: 0 20px;
+  }
+
+  &_input::placeholder {
+    color: #8c8c8c;
+  }
+
+  &_textarea::placeholder {
+    color: #8c8c8c;
+  }
+
+  &_textarea-wrap {
+    margin: 0 5px;
+  }
+
+  &_textarea {
+    width: 100%;
+    margin-top: 10px;
+    background: #E5E5E5;
+    border-radius: 5px;
+    border: none;
+    padding: 20px;
+  }
+
+  &_form_bottom {
+    display: flex;
+    align-items: center;
+    margin: 10px 5px 0;
+  }
+
+  &_address {
+    font-weight: 900;
+    font-size: 12px;
+    color: #999;
+    display: flex;
+    align-items: center;
+  }
+
+  &_submit-btn {
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFFFF;
+    border-radius: 5px;
+    background: #E8C300;
+    width: 100%;
+    border: none;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  &_form-phone-icon {
+    transform: scale(-1,1);
+  }
+
+  &_form-icon {
+    margin: 0 10px;
+  }
+
+  &_form-icon:first-of-type {
+    margin-left: 0;
+  }
 }
 
-.contact_text-box {
-  max-width: 565px;
-  text-align: center;
-  margin: 0 auto 50px;
-}
-
-.contact_text-box_title {
-  margin-top: 100px;
-}
-
-.contact_form {
-  flex-wrap: wrap;
-  margin: 0 -5px;
-}
-
-.contact_input-wrap {
-  padding: 0 5px;
-}
-
-.contact_input {
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 475px;
   width: 100%;
-  background: #E5E5E5;
-  border-radius: 5px;
-  height: 60px;
-  border: none;
-  padding: 0 20px;
+
 }
 
-.contact_input::placeholder {
-  color: #8c8c8c;
-}
-
-.contact_textarea::placeholder {
-  color: #8c8c8c;
-}
-
-.contact_textarea-wrap {
-  margin: 0 5px;
-}
-
-.contact_textarea {
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 475px;
   width: 100%;
-  margin-top: 10px;
-  background: #E5E5E5;
-  border-radius: 5px;
-  border: none;
-  padding: 20px;
-}
-
-.contact_form_bottom {
   display: flex;
-  align-items: center;
-  margin: 10px 5px 0;
-}
-
-.contact_address {
-  font-weight: 900;
-  font-size: 12px;
-  color: #999;
-  display: flex;
-  align-items: center;
-}
-
-.contact_submit-btn {
-  font-weight: bold;
-  font-size: 12px;
-  color: #FFFFFF;
-  border-radius: 5px;
-  background: #E8C300;
-  width: 100%;
-  border: none;
-  height: 60px;
-  cursor: pointer;
-}
-
-.contact_form-phone-icon {
-  transform: scale(-1,1);
-}
-
-.contact_form-icon {
-  margin: 0 10px;
-}
-
-.contact_form-icon:first-of-type {
-  margin-left: 0;
-}
-
-.map_container {
-   display: flex;
   justify-content: center;
 }
 
 .footer {
   background: rgba(0, 0, 0, 0.9);
+  &_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  &_text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+  }
 }
 
-.footer_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-}
-
-.footer_text {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-}

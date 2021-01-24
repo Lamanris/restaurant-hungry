@@ -28,12 +28,12 @@ el.addEventListener('click', (evt) => {
 )
 
 const menuTypeItems = document.querySelectorAll('.menu_type-item');
+const allMenuLists = document.querySelectorAll('.menu_list');
 
 menuTypeItems.forEach((el) => {
     el.addEventListener('click', () => {
-        let allMenuLists = document.querySelectorAll('.menu_list')
         allMenuLists.forEach((el) => el.classList.remove('active'))
-        let menuList = document.getElementById(el.getAttribute('data-state'));
+        const menuList = document.getElementById(el.getAttribute('data-state'));
         menuList.classList.add('active')
     })
 })

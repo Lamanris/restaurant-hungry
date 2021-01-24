@@ -1,6 +1,107 @@
 @media (max-width: 1400px) {
     .container {
-        margin: 0 80px;
+        margin: 0 40px;
     }
+    .navbar_item {
+        padding: 40px 30px 0;
+    }
+    .hero_content {
+        margin-top: 60px;
+    }
+}
+
+/* Landscape tablets and medium desktops */
+@media (max-width: 1200px) {
+    .navbar_item {
+        padding: 40px 20px 0;
+    }
+    .header_logo {
+        margin-top: 0;
+    }
+    .header_logo svg {
+        width: 80%;
+    }
+    .hero_content {
+        margin-top: 20px;
+    }
+    .hero_subtitle {
+        margin-bottom: 10px;
+    }
+    .hero_btn-wrap {
+        margin-top: 42px;
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: 992px) {
+    .container {
+        margin: 0 30px;
+    }
+
+    .navbar_item {
+        padding: 40px 10px 0;
+    }
+    .hero_title {
+        font-size: 68px;
+        margin-bottom: 40px;
+    }
+
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 765px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar_item {
+        padding: 20px 0 0;
+        height: inherit;
+    }
+    .right-navbar {
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .hero_title {
+        max-width: 500px;
+    }
+    .hero_content {
+        margin-top: 20px;
+    }
+    .explore-btn {
+        width: 150px;
+        height: 50px;
+    }
+    .book-btn {
+        width: 150px;
+        height: 50px;
+    }
+    .hero_work-time {
+        font-size: 10px;
+    }
+    .hero_icon {
+        font-size: 12px;
+    }
+    .hero_title span:after {
+        right: auto;
+        margin: 0;
+        left: 106px;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 520px) {
+    .container {
+        margin: 0 15px;
+    }
+    .hero_title {
+        font-size: 56px;
+    }
+    .hero_title span:after {
+        left: 82px;
+    }
+}
+
+/* Iphone 5 */
+@media (max-width: 325px) {
+
 }
 
