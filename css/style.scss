@@ -69,27 +69,31 @@ a {
   justify-content: center;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
-
+  text-transform: uppercase;
 }
 
 .section {
-  &_wrapper {
+  &__wrapper {
     align-items: center;
   }
-  &_box {
+
+  &__box {
     text-align: center;
   }
-  &_text-box_title {
+
+  &__text-box__title {
     font-family: "Banny Round", sans-serif;
     font-size: 36px;
-    line-height: 48px;
+    line-height: 40px;
     text-transform: uppercase;
     margin-bottom: 30px;
   }
-  &_text-box_title span {
+
+  &__text-box__title span {
     position: relative;
   }
-  &_text-box_title span:after {
+
+  &__text-box__title span:after {
     content: "";
     width: 59px;
     height: 5px;
@@ -101,17 +105,18 @@ a {
     right: 0;
     margin: 0 auto;
   }
-  &_text-box_text {
+
+  &__text-box__text {
     font-size: 16px;
 
     margin-top: 20px;
   }
 
-  &_box img{
+  &__box img {
     max-width: 100%;
   }
 
-  &_pre-title {
+  &__pre-title {
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
@@ -124,11 +129,11 @@ a {
     align-items: flex-end;
   }
 
-  &_img-box {
+  &__img-box {
     position: relative;
   }
 
-  &_img-box:after {
+  &__img-box:after {
     content: "";
     width: 250px;
     height: 250px;
@@ -143,42 +148,50 @@ a {
   }
 }
 
-.text-box_subtitle {
+.text-box__subtitle {
   font-weight: bold;
   font-size: 18px;
 
 }
 
 .header {
-  &_wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
   }
-  &_logo {
+
+  &__logo {
     margin-top: 25px;
     text-align: center;
   }
+
+  &__burger {
+    display: none;
+  }
+  &__navbar {
+    width: 50%;
+    display: flex;
+  }
+
+  &__right-navbar {
+    justify-content: flex-end;
+  }
+
+  &__navbar__item {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    height: 100px;
+    padding: 40px 45px 0;
+    display: inline-block;
+  }
 }
 
-.navbar {
-  width: 50%;
-  display: flex;
-}
 
-.right-navbar {
-  justify-content: flex-end;
-}
 
-.navbar_item {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 18px;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  height: 100px;
-  padding: 40px 45px 0;
-  display: inline-block;
-}
+
 
 .hero {
   &-bg {
@@ -186,27 +199,32 @@ a {
     height: 100vh;
 
   }
-  &_content {
+
+  &__content {
     margin-top: 151px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &_work-time {
+
+  &__work-time {
     font-weight: bold;
     font-size: 12px;
     line-height: 12px;
     color: #FFFFFF;
     width: 38px;
   }
-  &_work-time p {
+
+  &__work-time p {
     transform: rotate(-180deg);
     writing-mode: vertical-lr;
   }
-  &_main-box {
+
+  &__main-box {
     text-align: center;
   }
-  &_subtitle {
+
+  &__subtitle {
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
@@ -215,7 +233,8 @@ a {
     color: #FFFFFF;
     margin-bottom: 20px;
   }
-  &_title {
+
+  &__title {
     font-family: "Banny Round", sans-serif;
     font-size: 96px;
     text-transform: uppercase;
@@ -223,10 +242,11 @@ a {
     margin-bottom: 60px;
   }
 
-  &_title span {
+  &__title span {
     position: relative;
   }
-  &_title span:after {
+
+  &__title span:after {
     content: "";
     width: 60px;
     height: 5px;
@@ -239,19 +259,22 @@ a {
     margin: 0 auto;
   }
 
-  &_buttons {
+  &__buttons {
     display: flex;
     justify-content: center;
   }
-  &_book-btn {
+
+  &__book-btn {
     margin-right: 40px;
   }
-  &_icons {
+
+  &__icons {
     display: flex;
     flex-direction: column;
     width: 38px;
   }
-  &_icon {
+
+  &__icon {
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 10px;
@@ -260,17 +283,20 @@ a {
     margin-bottom: 20px;
     display: block;
   }
-  &_btn-wrap {
+
+  &__btn-wrap {
     text-align: center;
     margin-top: 72px;
   }
-  &_down-btn-wrapper {
+
+  &__down-btn-wrapper {
     border: 1px solid rgba(255, 255, 255, 0.2);
     display: inline-block;
     padding: 10px;
     border-radius: 50%;
   }
-  &_down-btn {
+
+  &__down-btn {
     padding: 11px;
     border-radius: 50%;
     cursor: pointer;
@@ -280,50 +306,57 @@ a {
 }
 
 .about {
-  &_wrapper {
+  &__wrapper {
     color: #000;
     margin: 50px 0;
   }
 
-  &_box {
+  &__box {
     padding: 0 40px;
   }
 
-  &_img-box:after {
+  &__img-box:after {
     right: 0;
   }
 }
 
 .team {
   background: #2d2a2a url("../img/team-bg.png") no-repeat center/cover;
-  &_wrapper {
+
+  &__wrapper {
     color: #FFFFFF;
     padding-bottom: 50px;
   }
-  &_img-box:after {
+
+  &__img-box:after {
     left: 0;
   }
-  &_text-box_subtitle {
+
+  &__text-box__subtitle {
     color: rgba(255, 255, 255, 0.9);
   }
-  &_text-box_text{
+
+  &__text-box__text {
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
 .booking {
-  &_wrapper {
+  &__wrapper {
     margin-top: 50px;
   }
-  &_img-box:after {
+
+  &__img-box:after {
     right: 0;
   }
-  &_form {
+
+  &__form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  &_form_input {
+
+  &__form__input {
     background: #E5E5E5;
     border-radius: 5px;
     padding: 0 20px;
@@ -332,10 +365,12 @@ a {
     width: 49%;
     margin-bottom: 10px;
   }
-  &_form_input::-webkit-input-placeholder {
+
+  &__form__input::-webkit-input-placeholder {
     color: rgba(51, 51, 51, 0.5);
   }
-  &_form_btn {
+
+  &__form__btn {
     width: 100%;
     border: none;
     background: #E8C300;
@@ -348,12 +383,14 @@ a {
     text-transform: uppercase;
     cursor: pointer;
   }
-  &_form_select-item {
+
+  &__form__select-item {
     font-size: 14px;
     text-indent: 20px;
     color: rgba(51, 51, 51, 0.5);
   }
-  &_work-time {
+
+  &__work-time {
     font-size: 12px;
     line-height: 12px;
     text-align: center;
@@ -376,18 +413,22 @@ a {
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
       }
+
       &::after {
         transform: translate(3px, -50%) rotate(45deg);
       }
     }
+
     .__select__content {
       opacity: 1;
     }
+
     .__select__label + .__select__input + .__select__label {
       max-height: 40px;
       border-top-width: 1px;
     }
   }
+
   &__title.text-active {
     color: black;
   }
@@ -401,6 +442,7 @@ a {
     cursor: pointer;
     font-size: 14px;
     color: rgba(51, 51, 51, 0.5);
+
     &::before,
     &::after {
       content: "";
@@ -414,17 +456,21 @@ a {
       background-color: rgba(51, 51, 51, 0.5);
       transform: translate(-3px, -50%) rotate(45deg);
     }
+
     &::after {
       transform: translate(3px, -50%) rotate(-45deg);
     }
+
     &:hover {
       border-color: #E8C300;
+
       &::before,
       &::after {
         background-color: #E8C300;
       }
     }
   }
+
   &__content {
     position: absolute;
     top: 60px;
@@ -441,16 +487,20 @@ a {
     opacity: 0;
     z-index: 8;
   }
+
   &__input {
     display: none;
+
     &:checked + label {
       background-color: #dedede;
     }
+
     &:disabled + label {
       opacity: 0.6;
       pointer-events: none;
     }
   }
+
   &__label {
     display: flex;
     align-items: center;
@@ -461,9 +511,11 @@ a {
     transition: all 0.2s ease-out;
     cursor: pointer;
     overflow: hidden;
+
     & + input + & {
       border-top: 0 solid #C7CCD160;
     }
+
     &:hover {
       background-color: #E8C300 !important;
       color: #ffffff;
@@ -474,51 +526,53 @@ a {
 
 .specialty {
   background: #2d2a2a url("../img/specialty's-bg.png") no-repeat center/cover;
-  &_wrapper {
+
+  &__wrapper {
     color: #FFFFFF;
     padding-bottom: 50px;
   }
-  &_img-box:after {
+
+  &__img-box:after {
     left: 0;
   }
-  &_text-box_subtitle {
+
+  &__text-box__subtitle {
     color: rgba(255, 255, 255, 0.9);
   }
-  &_text-box_text{
+
+  &__text-box__text {
     color: rgba(255, 255, 255, 0.6);
   }
 }
 
 .swiper-pagination {
   margin-bottom: 35px;
-}
-
-.swiper-pagination-bullet {
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background: #FFFFFF;
+  &-bullet {
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+  &-bullet-active {
+    background: #FFFFFF;
+  }
 }
 
 .menu {
-    margin-top: 100px;
-    margin-bottom: 60px;
+  margin-top: 100px;
+  margin-bottom: 60px;
 
-  &_text-box {
+  &__text-box {
     max-width: 565px;
     margin: 0 auto;
     text-align: center;
   }
 
-  &_types {
+  &__types {
     display: flex;
     justify-content: center;
     margin-top: 50px;
   }
 
-  &_type-item {
+  &__type-item {
     font-weight: bold;
     font-size: 12px;
     color: #333333;
@@ -532,29 +586,29 @@ a {
     text-transform: uppercase;
   }
 
-  &_type-item:last-of-type {
+  &__type-item:last-of-type {
     border: none;
   }
 
-  &_list {
+  &__list {
     margin: 51px -10px 0;
     display: none;
   }
 
-  &_list.active {
+  &__list.active {
     display: flex;
   }
 
-  &_list-col {
+  &__list-col {
     padding: 0 10px;
   }
 
-  &_list-item {
+  &__list-item {
     height: 66px;
     animation: fadeInTop 0.5s ease forwards;
   }
 
-  &_list-item_title {
+  &__list-item__title {
     font-family: "Banny Round", sans-serif;
     font-size: 18px;
     color: #333333;
@@ -562,11 +616,11 @@ a {
     text-transform: uppercase;
   }
 
-  &_list-item_title span {
+  &__list-item__title span {
     margin-left: 5px;
   }
 
-  &_list-item_text {
+  &__list-item__text {
     color: #999;
     font-size: 14px;
   }
@@ -574,19 +628,21 @@ a {
 
 .events {
   background: url("../img/specialty's-bg.png") no-repeat center/cover;
-  &_img-box {
+
+  &__img-box {
     position: relative;
   }
 
-  &_img-box1:after {
+  &__img-box1:after {
     left: 0;
   }
-  &_img-box2:after {
+
+  &__img-box2:after {
     right: 0;
   }
 
-  &_img-box_sign {
-    font-family:"Banny Round", sans-serif;
+  &__img-box__sign {
+    font-family: "Banny Round", sans-serif;
     font-size: 24px;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -595,20 +651,20 @@ a {
     position: absolute;
   }
 
-  &_img-box1_sign {
+  &__img-box1__sign {
     transform: rotate(90deg);
     right: 0;
     top: 0;
   }
 
-  &_img-box2_sign {
+  &__img-box2__sign {
     left: 0;
     transform: rotate(180deg);
     writing-mode: vertical-lr;
     bottom: 0;
   }
 
-  &_bottom-text {
+  &__bottom-text {
     font-size: 12px;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
@@ -617,7 +673,7 @@ a {
 }
 
 .places {
-  &-images_container {
+  &-images__container {
     max-width: 1440px;
     margin: 0 auto;
   }
@@ -630,26 +686,27 @@ a {
 
 .contact {
   padding-bottom: 100px;
-  &_text-box {
+
+  &__text-box {
     max-width: 565px;
     text-align: center;
     margin: 0 auto 50px;
   }
 
-  &_text-box_title {
+  &__text-box__title {
     margin-top: 100px;
   }
 
-  &_form {
+  &__form {
     flex-wrap: wrap;
     margin: 0 -5px;
   }
 
-  &_input-wrap {
+  &__input-wrap {
     padding: 0 5px;
   }
 
-  &_input {
+  &__input {
     width: 100%;
     background: #E5E5E5;
     border-radius: 5px;
@@ -658,19 +715,19 @@ a {
     padding: 0 20px;
   }
 
-  &_input::placeholder {
+  &__input::placeholder {
     color: #8c8c8c;
   }
 
-  &_textarea::placeholder {
+  &__textarea::placeholder {
     color: #8c8c8c;
   }
 
-  &_textarea-wrap {
+  &__textarea-wrap {
     margin: 0 5px;
   }
 
-  &_textarea {
+  &__textarea {
     width: 100%;
     margin-top: 10px;
     background: #E5E5E5;
@@ -679,13 +736,13 @@ a {
     padding: 20px;
   }
 
-  &_form_bottom {
+  &__form__bottom {
     display: flex;
     align-items: center;
     margin: 10px 5px 0;
   }
 
-  &_address {
+  &__address {
     font-weight: 900;
     font-size: 12px;
     color: #999;
@@ -693,7 +750,7 @@ a {
     align-items: center;
   }
 
-  &_submit-btn {
+  &__submit-btn {
     font-weight: bold;
     font-size: 12px;
     color: #FFFFFF;
@@ -705,15 +762,15 @@ a {
     cursor: pointer;
   }
 
-  &_form-phone-icon {
-    transform: scale(-1,1);
+  &__form-phone-icon {
+    transform: scale(-1, 1);
   }
 
-  &_form-icon {
+  &__form-icon {
     margin: 0 10px;
   }
 
-  &_form-icon:first-of-type {
+  &__form-icon:first-of-type {
     margin-left: 0;
   }
 }
@@ -726,7 +783,7 @@ a {
 
 }
 
-.gmap_canvas {
+.gmap__canvas {
   overflow: hidden;
   background: none !important;
   height: 475px;
@@ -737,13 +794,15 @@ a {
 
 .footer {
   background: rgba(0, 0, 0, 0.9);
-  &_wrapper {
+
+  &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
   }
-  &_text {
+
+  &__text {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
   }

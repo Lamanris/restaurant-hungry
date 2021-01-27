@@ -2,32 +2,32 @@
     .container {
         margin: 0 40px;
     }
-    .navbar_item {
+    .header__navbar__item {
         padding: 40px 30px 0;
     }
-    .hero_content {
+    .hero__content {
         margin-top: 60px;
     }
 }
 
 /* Landscape tablets and medium desktops */
 @media (max-width: 1200px) {
-    .navbar_item {
+    .header__navbar__item {
         padding: 40px 20px 0;
     }
-    .header_logo {
+    .header__logo {
         margin-top: 0;
     }
-    .header_logo svg {
+    .header__logo svg {
         width: 80%;
     }
-    .hero_content {
+    .hero__content {
         margin-top: 20px;
     }
-    .hero_subtitle {
+    .hero__subtitle {
         margin-bottom: 10px;
     }
-    .hero_btn-wrap {
+    .hero__btn-wrap {
         margin-top: 42px;
     }
 }
@@ -38,32 +38,60 @@
         margin: 0 30px;
     }
 
-    .navbar_item {
+    .section__img-box:after {
+        width: 180px;
+        height: 180px;
+        border-width: 18px;
+    }
+
+    .header__navbar__item {
         padding: 40px 10px 0;
     }
-    .hero_title {
+    .hero__title {
         font-size: 68px;
         margin-bottom: 40px;
+    }
+
+    .booking__work-time {
+        margin-top: 10px;
     }
 
 }
 /* Landscape phones and portrait tablets */
 @media (max-width: 765px) {
-    .navbar {
+    .section__img-box:after {
+        display: none;
+    }
+    .section__text-box__title {
+        font-size: 28px;
+    }
+
+    .text-box__subtitle {
+        font-size: 14px;
+    }
+    .section__text-box__text {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .section__pre-title {
+        margin-bottom: 20px;
+        height: 40px;
+    }
+    .header__navbar {
         flex-direction: column;
     }
-    .navbar_item {
+    .header__navbar__item {
         padding: 20px 0 0;
         height: inherit;
     }
-    .right-navbar {
+    .header__right-navbar {
         justify-content: flex-start;
         align-items: flex-end;
     }
-    .hero_title {
+    .hero__title {
         max-width: 500px;
     }
-    .hero_content {
+    .hero__content {
         margin-top: 20px;
     }
     .explore-btn {
@@ -74,16 +102,37 @@
         width: 150px;
         height: 50px;
     }
-    .hero_work-time {
+    .hero__work-time {
         font-size: 10px;
     }
-    .hero_icon {
+    .hero__icon {
         font-size: 12px;
     }
-    .hero_title span:after {
+    .hero__title span:after {
         right: auto;
         margin: 0;
         left: 106px;
+    }
+    .about__wrapper {
+        margin: 30px 0;
+    }
+    .team__wrapper {
+        padding-bottom: 30px;
+    }
+    .booking__wrapper {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    .booking__text-box {
+        width: 100%;
+    }
+    .booking__img-box {
+        width: 100%;
+    }
+    .booking__work-time {
+        height: 30px;
+        margin-top: 20px;
+        font-size: 11px;
     }
 }
 
@@ -92,11 +141,245 @@
     .container {
         margin: 0 15px;
     }
-    .hero_title {
-        font-size: 56px;
+    .section__wrapper {
+        flex-wrap: wrap;
     }
-    .hero_title span:after {
-        left: 82px;
+
+    .section__box {
+        width: 100%;
+    }
+    .section__text-box__title {
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .section__text-box__title span {
+        position: static;
+    }
+    .section__text-box__title span:after {
+        bottom: -5px;
+    }
+
+
+    .section__pre-title {
+        margin-bottom: 0;
+    }
+
+    body.lock {
+        overflow: hidden
+    }
+
+    .header__burger {
+        display: block;
+        width: 30px;
+        height: 22px;
+        z-index: 6;
+        margin-top: 21px;
+        position: fixed;
+        right: 15px;
+        top: 0;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: #E8C300;
+        border-radius: 1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 10px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .header__burger:after, .header__burger:before {
+        content: "";
+        background-color: #E8C300;
+        border-radius: 1px;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s
+    }
+
+    .header__burger:before {
+        top: 0
+    }
+
+    .header__burger:after {
+        bottom: 0
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 12px
+    }
+
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 8px
+    }
+
+    .header__burger.active span {
+        transform: scale(0)
+    }
+
+
+    .header__navbar-burger {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        background-color: #191919;
+        margin: 0;
+        z-index: 5;
+        padding-top: 60px;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        overflow: auto;
+        -webkit-box-shadow: 0 7px 10px -4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 7px 10px -4px rgba(0, 0, 0, 0.25)
+    }
+
+    .header__wrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        background: url("../img/team-bg.png") no-repeat;
+    }
+
+    .header__navbar{
+        display: none;
+    }
+
+    .header__navbar.active {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .header__right-navbar {
+        align-items: center;
+    }
+
+    .header__navbar__item {
+        font-family: "Banny Round", sans-serif;
+        font-size: 25px;
+        padding: 15px;
+        color: white;
+    }
+
+    .header__left-navbar {
+        position: relative;
+        padding-bottom: 30px;
+    }
+
+    .header__left-navbar:after {
+        content: "";
+        width: 60%;
+        height: 3px;
+        background-color: #E8C300;
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .header__navbar-burger.active {
+        top: 0
+    }
+
+    .header__logo {
+        display: none;
+    }
+
+
+    .explore-btn {
+        width: 100px;
+        height: 40px;
+    }
+    .book-btn {
+        width: 100px;
+        height: 40px;
+        margin-right: 20px;
+    }
+    .hero__content {
+        margin-top: 0;
+        padding-top: 80px;
+        flex-wrap: wrap;
+    }
+    .hero__work-time {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+    .hero__work-time p {
+        transform: rotate(0);
+        writing-mode: inherit;
+    }
+    .hero__main-box {
+        width: 100%;
+    }
+    .hero__title {
+        font-size: 56px;
+        position: relative;
+    }
+    .hero__title span {
+        position: static;
+    }
+    .hero__title span:after {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .hero__title span:after {
+        bottom: -20px;
+    }
+    .hero__icons {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .hero__icon {
+        width: 34px;
+        height: 34px;
+        margin: 0 5px;
+    }
+    .hero__btn-wrap {
+        margin-top: 20px;
+    }
+    .hero__down-btn-wrapper {
+        padding: 8px;
+    }
+    .hero__down-btn {
+        padding: 10px;
+    }
+
+
+    .about__wrapper {
+        margin-bottom: 10px;
+    }
+    .booking__img-box {
+        display: none;
+    }
+    .team__wrapper {
+        padding-bottom: 40px;
+    }
+    .booking__work-time {
+        height: 40px;
+    }
+    .specialty__wrapper {
+        padding-bottom: 40px;
+    }
+    .swiper-pagination {
+        margin-bottom: 5px;
     }
 }
 
