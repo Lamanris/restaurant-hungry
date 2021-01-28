@@ -20,10 +20,10 @@
             <div class="header__wrapper header__navbar-burger">
                 <div class="header__burger"><span></span></div>
                 <nav class="header__left-navbar header__navbar">
-                    <a href="#" class="header__navbar__item">Home</a>
-                    <a href="#" class="header__navbar__item">About</a>
-                    <a href="#" class="header__navbar__item">Team</a>
-                    <a href="#" class="header__navbar__item">Booking</a>
+                    <a href="#home" class="header__navbar__item">Home</a>
+                    <a href="#about" class="header__navbar__item">About</a>
+                    <a href="#team" class="header__navbar__item">Team</a>
+                    <a href="#booking" class="header__navbar__item">Booking</a>
                 </nav>
                 <div class="header__logo logo">
                     <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,16 +32,16 @@
                     </svg>
                 </div>
                 <nav class="header__right-navbar header__navbar">
-                    <a href="#" class="header__navbar__item">Menu</a>
-                    <a href="#" class="header__navbar__item">Galerie</a>
-                    <a href="#" class="header__navbar__item">Events</a>
-                    <a href="#" class="header__navbar__item">Contact</a>
+                    <a href="#menu" class="header__navbar__item">Menu</a>
+                    <a href="#galerie" class="header__navbar__item">Galerie</a>
+                    <a href="#events" class="header__navbar__item">Events</a>
+                    <a href="#contact" class="header__navbar__item">Contact</a>
                 </nav>
             </div>
 
         </div>
     </header>
-    <div class="hero__container container">
+    <div class="hero__container container" id="home">
         <div class="hero__content">
             <div class="hero__work-time">
                 <div class="hero__work-time__content">
@@ -53,8 +53,8 @@
                 <p class="hero__subtitle">RESTAURANT</p>
                 <h1 class="hero__title"><span>hungry people</span></h1>
                 <div class="hero__buttons">
-                    <a href="#" class="hero__book-btn book-btn">Book Table</a>
-                    <a href="#" class="hero__explore-btb explore-btn">Explore</a>
+                    <a href="#" class="hero__book-btn book-btn btn">Book Table</a>
+                    <a href="#" class="hero__explore-btb explore-btn btn">Explore</a>
                 </div>
             </div>
             <div class="hero__icons">
@@ -65,18 +65,21 @@
         </div>
         <div class="hero__btn-wrap">
             <div class="hero__down-btn-wrapper">
-                <button class="hero__down-btn">
+                <a href="#about" class="hero__down-btn">
                     <svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.33594 8.25L1.02344 2.9375C0.841146 2.75521 0.75 2.53385 0.75 2.27344C0.75 2.01302 0.841146 1.79167 1.02344 1.60938L1.92188 0.75C2.10417 0.567708 2.32552 0.476562 2.58594 0.476562C2.84635 0.476562 3.06771 0.567708 3.25 0.75L7 4.5L10.75 0.75C10.9323 0.567708 11.1536 0.476562 11.4141 0.476562C11.6745 0.476562 11.8958 0.567708 12.0781 0.75L12.9766 1.60938C13.1589 1.79167 13.25 2.01302 13.25 2.27344C13.25 2.53385 13.1589 2.75521 12.9766 2.9375L7.66406 8.25C7.48177 8.43229 7.26042 8.52344 7 8.52344C6.73958 8.52344 6.51823 8.43229 6.33594 8.25Z"
                               fill="#333333"/>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>
     </div>
+    <span class="left-bg-line bg-line header__left-bg-line"></span>
+    <span class="middle-bg-line bg-line header__middle-bg-line"></span>
+    <span class="right-bg-line bg-line header__right-bg-line"></span>
 </div>
 
-<section class="about">
+<section class="about" id="about">
     <div class="about__container container">
         <div class="about__wrapper section__wrapper row">
             <div class="about__text-box section__box col-6">
@@ -99,7 +102,7 @@
     </div>
 </section>
 
-<section class="team">
+<section class="team" id="team">
     <div class="team__container container">
         <p class="team__pre-title section__pre-title">OUR TEAM</p>
         <div class="team__wrapper section__wrapper row">
@@ -121,9 +124,12 @@
             </div>
         </div>
     </div>
+    <span class="left-bg-line bg-line"></span>
+    <span class="middle-bg-line bg-line"></span>
+    <span class="right-bg-line bg-line"></span>
 </section>
 
-<section class="booking">
+<section class="booking" id="booking">
     <div class="booking__container container">
         <div class="booking__wrapper section__wrapper row">
             <div class="booking__text-box section__box col-6">
@@ -184,7 +190,7 @@
                             <label for="singleSelect15" class="__select__label">23:00</label>
                         </div>
                     </div>
-                    <button class="booking__form__btn">Book now</button>
+                    <button class="booking__form__btn btn">Book now</button>
                 </form>
             </div>
             <div class="booking__img-box section__img-box section__box col-6">
@@ -196,7 +202,7 @@
     </div>
 </section>
 
-<section class="specialty">
+<section class="specialty" id="specialty">
     <div class="specialty__container container">
         <p class="specialty__pre-title section__pre-title">specialties</p>
         <div class="swiper-container specialty-swiper-container">
@@ -278,9 +284,12 @@
             </div>
         </div>
     </div>
+    <span class="left-bg-line bg-line"></span>
+    <span class="middle-bg-line bg-line"></span>
+    <span class="right-bg-line bg-line"></span>
 </section>
 
-<section class="menu">
+<section class="menu" id="menu">
     <div class="menu__container container">
         <div class="menu__text-box">
             <h3 class="menu__text-box__title section__text-box__title">
@@ -1053,25 +1062,33 @@
 
 </section>
 
-<section class="events">
+<section class="events" id="events">
     <div class="events__container container">
         <p class="events__pre-title section__pre-title">private events</p>
         <div class="events__wrapper section__wrapper row">
             <div class="events__img-box events__img-box1 section__img-box section__box col-6">
-                <img src="./img/events-img1.png" alt="wedding">
-                <span class="events__img-box1__sign events__img-box__sign">Weddings</span>
+                <div class="events__img-box__wrapper">
+                    <img src="./img/events-img1.png" alt="wedding">
+                    <span class="events__img-box1__sign events__img-box__sign">Weddings</span>
+                </div>
+
             </div>
             <div class="events__img-box events__img-box2 section__img-box section__box col-6">
-                <img src="./img/events-img2.png" alt="corporate">
-                <span class="events__img-box2__sign events__img-box__sign">Corporate Parties</span>
-            </div>
+                <div class="events__img-box__wrapper">
+                    <img src="./img/events-img2.png" alt="corporate">
+                    <span class="events__img-box2__sign events__img-box__sign">Corporate Parties</span>
+                </div>
+                </div>
         </div>
         <p class="events__bottom-text">For private events please call: +40 729 131 637/+40 726 458 782 or use the contact
             form.</p>
     </div>
+    <span class="left-bg-line bg-line"></span>
+    <span class="middle-bg-line bg-line"></span>
+    <span class="right-bg-line bg-line"></span>
 </section>
 
-<section class="places-images">
+<section class="places-images" id="galerie">
     <div class="places-images__container">
         <div class="places-images__wrapper row">
             <div class="col-3 places-images-img">
@@ -1091,7 +1108,7 @@
 
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
     <div class="contact__container container">
         <div class="contact__text-box">
             <h3 class="contact__text-box__title section__text-box__title">
@@ -1122,7 +1139,8 @@
             </div>
             <div class="contact__form__bottom col-12 row ">
                 <div class="col-6 contact__address">
-                    <span class="contact__form-icon">
+                    <span>
+                        <span class="contact__form-icon">
                         <svg id="Layer__1" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px"
                              fill="#E8C300" x="0px" y="0px"
                              viewBox="0 0 512 512" xml:space="preserve">
@@ -1166,10 +1184,12 @@
 </svg>
                     </span>
                     5th London Boulevard, U.K.
-                    <span class="contact__form-icon">
+                    </span>
+                    <span>
+                        <span class="contact__form-icon">
                         <svg id="Capa__1" class="contact__form-phone-icon" width="12px" height="12px"
                              fill="#E8C300" xmlns="http://www.w3.org/2000/svg"
-                              x="0px" y="0px"
+                             x="0px" y="0px"
                              viewBox="0 0 384 384" xml:space="preserve">
 <g>
 	<g>
@@ -1213,7 +1233,9 @@
 </svg>
                     </span>
                     +40 729 131 637/+40 726 458 782
-                    <span class="contact__form-icon">
+                    </span>
+                    <span>
+                        <span class="contact__form-icon">
                         <svg id="Capa__1" xmlns="http://www.w3.org/2000/svg" width="12px" height="12px"
                              fill="#E8C300"  x="0px" y="0px"
                              viewBox="0 0 477.867 477.867"
@@ -1262,16 +1284,17 @@
 </svg>
                     </span>
                     office@mindblister.com
+                    </span>
                 </div>
                 <div class="col-6">
-                    <button class="contact__submit-btn">SEND MESSAGE</button>
+                    <button class="contact__submit-btn btn">SEND MESSAGE</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
 
-<section class="map">
+<section class="map" >
     <div class="map__container">
         <div class="mapouter">
             <div class="gmap__canvas">
@@ -1286,7 +1309,7 @@
 <footer class="footer">
     <div class="footer__container container">
         <div class="footer__wrapper">
-            <p class="footer__text">© Copyright Mindblister  2019</p>
+            <p class="footer__text">© Copyright <b>Mindblister</b>  2019</p>
         </div>
     </div>
 </footer>

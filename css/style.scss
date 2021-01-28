@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
 }
@@ -55,6 +59,30 @@ a {
   align-items: center;
   width: 200px;
   height: 60px;
+}
+
+.btn {
+  overflow: hidden;
+  position: relative;
+}
+
+.btn:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -36px;
+  left: -100px;
+  background: white;
+  width: 50px;
+  height: 125px;
+  opacity: 20%;
+  transform: rotate(-45deg);
+}
+
+.btn:hover:after {
+  left: 120%;
+  transition: all 700ms cubic-bezier(0.3, 1, 0.2, 1);
+  -webkit-transition: all 700ms cubic-bezier(0.3, 1, 0.2, 1);
 }
 
 .explore-btn {
@@ -148,21 +176,66 @@ a {
   }
 }
 
+.bg-line {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.left-bg-line {
+  left: 20%;
+  top: 0;
+}
+.right-bg-line {
+  right: 20%;
+  top: 0;
+}
+
+.middle-bg-line {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
 .text-box__subtitle {
   font-weight: bold;
   font-size: 18px;
 
 }
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
 
 .header {
+  position: relative;
+  z-index: 10000;
   &__wrapper {
     display: flex;
     justify-content: space-between;
   }
 
+  &__left-bg-line {
+    top: 100px;
+  }
+  &__right-bg-line {
+    top: 100px;
+  }
+  &__middle-bg-line {
+    top: 203px;
+  }
+
+
   &__logo {
     margin-top: 25px;
     text-align: center;
+    animation: spin 5s linear 0s infinite;
+    background-color: transparent;
+    z-index: 5;
+    position: relative;
+
   }
 
   &__burger {
@@ -186,18 +259,21 @@ a {
     height: 100px;
     padding: 40px 45px 0;
     display: inline-block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: ease-in-out .4s;
+
+      &:hover {
+        color: #FFD600;
+      }
   }
+
 }
-
-
-
-
 
 .hero {
   &-bg {
     background: #131010 url("../img/header-bg.png") no-repeat center/cover;
     height: 100vh;
-
+    position: relative;
   }
 
   &__content {
@@ -282,6 +358,11 @@ a {
     text-align: center;
     margin-bottom: 20px;
     display: block;
+    transition: .4s;
+      &:hover {
+        color: #E8C300;
+        transform: scale(1.1);
+      }
   }
 
   &__btn-wrap {
@@ -302,6 +383,15 @@ a {
     cursor: pointer;
     border: none;
     outline: none;
+    background-color: white;
+    display: inline-block;
+    transition: .4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:hover.hero__down-btn-wrapper {
+        padding: 20px;
+      }
   }
 }
 
@@ -322,6 +412,7 @@ a {
 
 .team {
   background: #2d2a2a url("../img/team-bg.png") no-repeat center/cover;
+  position: relative;
 
   &__wrapper {
     color: #FFFFFF;
@@ -526,6 +617,7 @@ a {
 
 .specialty {
   background: #2d2a2a url("../img/specialty's-bg.png") no-repeat center/cover;
+  position: relative;
 
   &__wrapper {
     color: #FFFFFF;
@@ -584,6 +676,11 @@ a {
     border-right: 1px solid rgba(51, 51, 51, 0.2);
     cursor: pointer;
     text-transform: uppercase;
+    transition: .5s;
+  }
+
+  &__type-item:hover {
+    color: #E8C300;
   }
 
   &__type-item:last-of-type {
@@ -628,9 +725,16 @@ a {
 
 .events {
   background: url("../img/specialty's-bg.png") no-repeat center/cover;
+  position: relative;
 
-  &__img-box {
+  &__pre-title {
+    height: 100px;
+    align-items: center;
+  }
+
+  &__img-box__wrapper {
     position: relative;
+    display: inline-block;
   }
 
   &__img-box1:after {
@@ -641,6 +745,7 @@ a {
     right: 0;
   }
 
+
   &__img-box__sign {
     font-family: "Banny Round", sans-serif;
     font-size: 24px;
@@ -649,18 +754,22 @@ a {
     background: #000000;
     border-radius: 0 5px 5px 0;
     position: absolute;
+    writing-mode: vertical-lr;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
   }
 
   &__img-box1__sign {
-    transform: rotate(90deg);
     right: 0;
     top: 0;
   }
 
   &__img-box2__sign {
-    left: 0;
     transform: rotate(180deg);
-    writing-mode: vertical-lr;
+    left: 0;
     bottom: 0;
   }
 
@@ -668,7 +777,10 @@ a {
     font-size: 12px;
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
-    height: 60px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -766,8 +878,12 @@ a {
     transform: scale(-1, 1);
   }
 
+  &__address span {
+    margin: 0 5px;
+  }
+
   &__form-icon {
-    margin: 0 10px;
+    margin: 0 5px;
   }
 
   &__form-icon:first-of-type {

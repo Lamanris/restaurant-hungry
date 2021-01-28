@@ -8,6 +8,9 @@
     .hero__content {
         margin-top: 60px;
     }
+    .contact__address {
+        width: 60%;
+    }
 }
 
 /* Landscape tablets and medium desktops */
@@ -21,6 +24,9 @@
     .header__logo svg {
         width: 80%;
     }
+    .header__middle-bg-line {
+        top: 150px;
+    }
     .hero__content {
         margin-top: 20px;
     }
@@ -30,6 +36,35 @@
     .hero__btn-wrap {
         margin-top: 42px;
     }
+    .menu__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .menu__list-col {
+        width: 50%;
+    }
+    .menu__list-col:last-of-type {
+        margin-top: 30px;
+    }
+    .menu__list-item {
+        text-align: center;
+    }
+
+    .events__img-box {
+        padding: 0 30px;
+    }
+
+    .contact__form__bottom {
+        flex-direction: column-reverse;
+    }
+    .contact__form__bottom .col-6 {
+        width: 100%;
+    }
+    .contact__address {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
 }
 
 /* Portrait tablets and small desktops */
@@ -55,6 +90,12 @@
     .booking__work-time {
         margin-top: 10px;
     }
+    .menu__list-item__title {
+        font-size: 16px;
+    }
+    .menu__list-item__text {
+        font-size: 12px;
+    }
 
 }
 /* Landscape phones and portrait tablets */
@@ -77,12 +118,17 @@
         margin-bottom: 20px;
         height: 40px;
     }
+
+    .bg-line {
+        display: none;
+    }
     .header__navbar {
         flex-direction: column;
     }
     .header__navbar__item {
         padding: 20px 0 0;
         height: inherit;
+        border: none;
     }
     .header__right-navbar {
         justify-content: flex-start;
@@ -120,7 +166,7 @@
         padding-bottom: 30px;
     }
     .booking__wrapper {
-        margin-top: 30px;
+        margin-top: 60px;
         flex-wrap: wrap;
     }
     .booking__text-box {
@@ -133,6 +179,67 @@
         height: 30px;
         margin-top: 20px;
         font-size: 11px;
+    }
+    .menu {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    .menu__list {
+        margin-top: 21px;
+    }
+    .menu__list-col {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .menu__list-item {
+        height: 50px;
+    }
+
+    .events__pre-title {
+        margin-bottom: 0;
+        height: 60px;
+    }
+    .events__bottom-text {
+        height: 60px;
+        font-size: 10px;
+    }
+    .events__img-box__sign {
+        font-size: 14px;
+        width: 50px;
+    }
+    .events__img-box {
+        padding: 0 10px;
+    }
+
+    .places-images__wrapper {
+        flex-wrap: wrap;
+    }
+
+    .places-images-img {
+        width: 50%;
+    }
+    .places-images-img img {
+        min-width: 100%;
+    }
+
+    .contact__text-box__title {
+        margin-top: 60px;
+    }
+    .contact {
+        padding-bottom: 40px;
+    }
+    .contact__text-box {
+        margin-bottom: 30px;
+    }
+    .contact__address {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .contact__address span {
+        margin-top: 10px;
+    }
+    .contact__submit-btn {
+        margin-bottom: 10px;
     }
 }
 
@@ -159,15 +266,9 @@
         bottom: -5px;
     }
 
-
     .section__pre-title {
         margin-bottom: 0;
     }
-
-    body.lock {
-        overflow: hidden
-    }
-
     .header__burger {
         display: block;
         width: 30px;
@@ -181,7 +282,7 @@
 
     .header__burger span {
         position: absolute;
-        background-color: #E8C300;
+        background-color: #ffd800;
         border-radius: 1px;
         left: 0;
         width: 100%;
@@ -190,11 +291,12 @@
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s;
+        box-shadow: 0 0 3px 0 #534e4e;
     }
 
     .header__burger:after, .header__burger:before {
         content: "";
-        background-color: #E8C300;
+        background-color: #ffd800;
         border-radius: 1px;
         position: absolute;
         width: 100%;
@@ -202,7 +304,8 @@
         left: 0;
         -webkit-transition: all 0.3s;
         -o-transition: all 0.3s;
-        transition: all 0.3s
+        transition: all 0.3s;
+        box-shadow: 0 0 3px 0 #534e4e;
     }
 
     .header__burger:before {
@@ -212,21 +315,6 @@
     .header__burger:after {
         bottom: 0
     }
-
-    .header__burger.active:before {
-        transform: rotate(45deg);
-        top: 12px
-    }
-
-    .header__burger.active:after {
-        transform: rotate(-45deg);
-        bottom: 8px
-    }
-
-    .header__burger.active span {
-        transform: scale(0)
-    }
-
 
     .header__navbar-burger {
         position: fixed;
@@ -257,12 +345,6 @@
         display: none;
     }
 
-    .header__navbar.active {
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
-
     .header__right-navbar {
         align-items: center;
     }
@@ -291,14 +373,36 @@
         margin: auto;
     }
 
-    .header__navbar-burger.active {
-        top: 0
-    }
-
     .header__logo {
         display: none;
     }
 
+    body.active {
+        overflow: hidden
+    }
+
+    body.active  .header__burger:before {
+        transform: rotate(45deg);
+        top: 12px
+    }
+    body.active  .header__burger:after {
+        transform: rotate(-45deg);
+        bottom: 8px
+    }
+
+    body.active .header__navbar-burger {
+        top: 0
+    }
+
+    body.active .header__burger span {
+        transform: scale(0)
+    }
+
+    body.active .header__navbar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
 
     .explore-btn {
         width: 100px;
@@ -311,7 +415,7 @@
     }
     .hero__content {
         margin-top: 0;
-        padding-top: 80px;
+        padding-top: 120px;
         flex-wrap: wrap;
     }
     .hero__work-time {
@@ -365,6 +469,7 @@
 
     .about__wrapper {
         margin-bottom: 10px;
+        margin-top: 60px;
     }
     .booking__img-box {
         display: none;
@@ -381,10 +486,54 @@
     .swiper-pagination {
         margin-bottom: 5px;
     }
+    .menu__list {
+        margin-top: 0;
+    }
+    .menu__types {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+    .menu__type-item {
+        margin-bottom: 10px;
+        border-left: 1px solid rgba(51, 51, 51, 0.2);
+        border-right: 1px solid rgba(51, 51, 51, 0.2);
+    }
+    .menu__type-item:last-of-type {
+        border-left: 1px solid rgba(51, 51, 51, 0.2);
+        border-right: 1px solid rgba(51, 51, 51, 0.2);
+    }
+    .menu__list-item__title {
+        font-size: 14px;
+    }
+    .menu__list-item__text {
+        font-size: 11px;
+    }
+
+    .events__img-box__sign {
+        font-size: 20px;
+        width: 50px;
+    }
+    .events__img-box {
+        padding: 0;
+    }
+
+    .places-images-img {
+        width: 100%;
+    }
+    .places-images-img img {
+        min-width: 100%;
+    }
+
+    .contact__input-wrap {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .contact__textarea {
+        margin-top: 0;
+    }
+    .footer__wrapper {
+        height: 60px;
+    }
 }
 
-/* Iphone 5 */
-@media (max-width: 325px) {
-
-}
 
