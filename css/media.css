@@ -339,6 +339,7 @@
         flex-direction: column;
         justify-content: flex-start;
         background: url("../img/team-bg.png") no-repeat;
+        background-size: cover;
     }
 
     .header__navbar{
