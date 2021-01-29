@@ -15,20 +15,27 @@ headerMenuItem.forEach((el) => {
 const selectSingle = document.querySelectorAll('.__select');
 const selectSingle_title = document.querySelectorAll('.__select__title');
 const selectSingle_labels = document.querySelectorAll('.__select__label');
-
+const mainWrapper = document.querySelector('.booking-main-wrapper');
 selectSingle_title.forEach((el) =>
 el.addEventListener('click', () => {
     let closeParent = el.closest('.__select')
     if ('active' === closeParent.getAttribute('data-state'))
     {
         closeParent.setAttribute('data-state', '')
+        mainWrapper.classList.remove('active')
 
     } else {
         selectSingle.forEach((el) => el.setAttribute('data-state', ''))
         closeParent.setAttribute('data-state', 'active')
+        mainWrapper.addEventListener("click", () => {
+            closeParent.setAttribute('data-state', '')
+            mainWrapper.classList.remove('active')
+        })
+        mainWrapper.classList.add('active')
     }
 })
 )
+
 selectSingle_labels.forEach((el) =>
 
 el.addEventListener('click', (evt) => {
@@ -37,6 +44,7 @@ el.addEventListener('click', (evt) => {
     closeTitle.textContent = evt.target.textContent
     closeTitle.classList.add('text-active')
     closeParent.setAttribute('data-state', '')
+    mainWrapper.classList.remove('active')
 })
 )
 

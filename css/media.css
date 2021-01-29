@@ -209,14 +209,11 @@
         padding: 0 10px;
     }
 
-    .places-images__wrapper {
-        flex-wrap: wrap;
+    .images-swiper-slide {
+        min-width: 50%;
     }
 
-    .places-images-img {
-        width: 50%;
-    }
-    .places-images-img img {
+    .images-swiper-slide img {
         min-width: 100%;
     }
 
@@ -519,10 +516,7 @@
         padding: 0;
     }
 
-    .places-images-img {
-        width: 100%;
-    }
-    .places-images-img img {
+    .images-swiper-slide {
         min-width: 100%;
     }
 
