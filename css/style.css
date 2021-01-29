@@ -678,6 +678,11 @@ a {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.swiper-slide {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
 .swiper-pagination {
   margin-bottom: 35px;
 }

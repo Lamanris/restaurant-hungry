@@ -656,6 +656,10 @@ a {
   }
 }
 
+.swiper-slide {
+  cursor: grab;
+}
+
 .swiper-pagination {
   margin-bottom: 35px;
   &-bullet {
